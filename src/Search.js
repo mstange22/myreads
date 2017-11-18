@@ -64,7 +64,7 @@ class Search extends Component {
     return (
     <div className="search-books">
       <div className="search-books-bar">
-        <Link to='/' className="close-search">Back</Link>
+        <Link to={process.env.PUBLIC_URL + '/'} className="close-search">Back</Link>
         <div className="search-books-input-wrapper">
           <input
             onChange={this.updateQuery}
