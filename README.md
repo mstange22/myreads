@@ -7,7 +7,12 @@ This is the first homework assignment in the Udacity React Nanodegree program. A
 To test the application:
 
 * install all project dependencies with `npm install`
-* start the development server with `npm start`
+* start the development server with `npm start`.  The project should deploy on http://localhost:3000.
+
+## The App
+The program starts with the MyReads home view, which is a three-shelf virtual bookshelf: Currently Reading, Want to Read, and Read.  The user can move any book to a different shelf, but clicking on the green-circled down arrow and selecting the shelf (or "none" to remove it from the home bookshelf).
+
+The + icon in the lower-right corner switches to the search view, where the user can enter characters in the search bar to bring up collections of books (see Note below re: Search Terms).  Once books have been loaded into the search view (max of 20), the user can move them to the home bookshelf by selecting a shelf.  
 
 ## Backend Server
 
