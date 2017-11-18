@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import Book from './Book'
+import PropTypes from 'prop-types'
 
 class CurrentlyReading extends Component {
+
+	static propTypes = {
+		currentlyReading: PropTypes.array.isRequired,
+        handleShelfChange: PropTypes.func.isRequired
+	}
 	render() {
 		return (
 			<div className="bookshelf">
 				<h2 className="bookshelf-title">Currently Reading</h2>
 				<div className="bookshelf-books">
 					<ol className="books-grid">
-						{this.props.booksCurrent.map(book => (
+						{/* display all 'currently reading' books */}
+						{this.props.currentlyReading.map(book => (
 							<li key={book.id}>
 								<Book book={book} handleShelfChange={this.props.handleShelfChange}/>
 							</li>
