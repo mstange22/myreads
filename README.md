@@ -1,11 +1,10 @@
 # MyReads Project
 
-This is the first homework assignment in the Udacity React Nanodegree program. A static template was provided along with the CSS and HTML markup.  I created new React Components for the Search and Bookshelves along with a component for each Shelf (CurrentlyReading, WantToRead & Read), Book and the ShelfChanger pop-up.
+This is the first homework assignment in the Udacity React Nanodegree program. A static template was provided along with the CSS and HTML markup.  I created new React Components for the `Search` and `Bookshelves` views, along with components for each of the shelves (`CurrentlyReading`, `WantToRead` & `Read`), `Book` and the `ShelfChanger` pop-up selector.
 
-## TL;DR
+## To run the application:
 
-To test the application:
-
+* clone this repository
 * install all project dependencies with `npm install`
 * start the development server with `npm start`.  The project should deploy on http://localhost:3000.
 
@@ -16,7 +15,7 @@ The + icon in the lower-right corner switches to the search view, where the user
 
 ## Backend Server
 
-To simplify the development process, a backend server was provided as well as an API file [`BooksAPI.js`], which contains the methods needed to perform operations on the backend.
+To simplify the development process, a backend server was provided as well as an API file `BooksAPI.js`, which contains the methods needed to perform operations on the backend.
 
 ## Note
 
