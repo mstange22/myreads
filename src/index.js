@@ -5,7 +5,7 @@ import App from './App'
 import './index.css'
 
 ReactDOM.render(
-    <Router basename={process.env.REACT_APP_BASENAME || '/'}>
+    <Router path={process.env.PUBLIC_URL + '/'}>
         <App />
     </Router>, document.getElementById('root')
 )
