@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
-import CurrentlyReading from './CurrentlyReading'
-import WantToRead from './WantToRead'
-import Read from './Read'
+import Shelf from './Shelf'
 
 class Bookshelves extends Component {
   
@@ -41,10 +39,10 @@ class Bookshelves extends Component {
           <h1>MyReads</h1>
         </div>
         <div className="list-books-content">
-          {/* insert shelf components - pass array of books and handleShelfChange function */}
-          <CurrentlyReading currentlyReading={this.state.currentlyReading} handleShelfChange={this.handleShelfChange}/>
-          <WantToRead wantToRead={this.state.wantToRead} handleShelfChange={this.handleShelfChange}/>
-          <Read read={this.state.read} handleShelfChange={this.handleShelfChange}/>
+          {/* insert shelf components - pass name, array of books and handleShelfChange function */}
+          <Shelf shelfName='Currently Reading' booksOnShelf={this.state.currentlyReading} handleShelfChange={this.handleShelfChange}/>
+          <Shelf shelfName='Want to Read' booksOnShelf={this.state.wantToRead} handleShelfChange={this.handleShelfChange}/>
+          <Shelf shelfName='Read' booksOnShelf={this.state.read} handleShelfChange={this.handleShelfChange}/>
         </div>
         <div className="open-search">
           <Link to='/search'>Add a book</Link>

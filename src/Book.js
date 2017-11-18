@@ -14,9 +14,9 @@ class Book extends Component {
 				<div className="book-top">
 					{/* handle cases where there are no image links */}
 					{book.imageLinks ? (
-						<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
+						<div className="book-cover" style={{ backgroundImage: `url(${book.imageLinks.thumbnail})` }}></div>
 					) : (
-							<div className="book-cover" style={{ width: 128, height: 193 }}></div>
+							<div className="book-cover"></div>
 						)}
 					<ShelfChanger book={book}  handleShelfChange={this.props.handleShelfChange}/>
 				</div>
