@@ -21,11 +21,11 @@ class Search extends Component {
   // refresh search books with shelves.  First set all to 'none',
   // then loop through books on shelves and set the shelves of any matching books
   updateSearchBookShelves() {
-    let books = this.state.searchResults
+    const { searchResults, booksOnShelves } = this.state
     this.setState({
-      searchResults: books.map(book => {
+      searchResults: searchResults.map(book => {
         book.shelf = 'none'
-        this.state.booksOnShelves.forEach(bookOnShelf => {
+        booksOnShelves.forEach(bookOnShelf => {
           bookOnShelf.id === book.id && (book.shelf = bookOnShelf.shelf)
         })
         return book;
