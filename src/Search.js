@@ -42,15 +42,7 @@ class Search extends Component {
       query ? (
         BooksAPI.search(query, 20).then(books => {
           !books.error ? (
-            this.setState({
-              searchResults: books.map(book => {
-                book.shelf = 'none'
-                this.state.booksOnShelves.forEach(bookOnShelf => {
-                  bookOnShelf.id === book.id && (book.shelf = bookOnShelf.shelf)
-                })
-                return book;
-              })
-            })                  
+            this.setState({ searchResults: books })
           ) : this.setState({ searchResults: [] })
         })
       ) : (this.setState({ searchResults: [] }))
