@@ -60,13 +60,13 @@ class Search extends Component {
   // update shelf of book and refresh books on shelf.
   // call updateSearchBookShelves to re-render search books with accurate shelving
   handleShelfChange = (book, shelf) => {
-		BooksAPI.update(book, shelf).then(() => {
+    BooksAPI.update(book, shelf).then(() => {
       BooksAPI.getAll().then(books => {
         this.setState({ booksOnShelves: books })
         this.updateSearchBookShelves()
       })
     })
-	}
+  }
 
   render() {
     return (
